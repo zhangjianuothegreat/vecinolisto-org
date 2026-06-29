@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VecinoListo · Tu guía local</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f6f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+        .card {
+            max-width: 680px;
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            border: 1px solid #eae6df;
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1f2a3a;
+            margin-bottom: 0.25rem;
+        }
+        .accent {
+            color: #c8473c;
+        }
+        .sub {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px dashed #e2dcd2;
+            padding-bottom: 1.25rem;
+        }
+        .tagline {
+            background: #f0ede7;
+            padding: 0.9rem 1.5rem;
+            border-radius: 60px;
+            display: inline-block;
+            font-weight: 500;
+            color: #2d3748;
+            margin-bottom: 1.75rem;
+            font-size: 0.95rem;
+        }
+        .placeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.75rem;
+            margin: 1.5rem 0 1.2rem;
+        }
+        .pill {
+            background: #f0ede7;
+            padding: 0.5rem 0.2rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            color: #2d3748;
+            font-weight: 500;
+        }
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #718096;
+            border-top: 1px solid #edebe6;
+            padding-top: 1.5rem;
+        }
+        .status {
+            display: inline-block;
+            background: #e6f7e6;
+            color: #1f6b3b;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin-top: 0.5rem;
+        }
+        a {
+            color: #c8473c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Vecino<span class="accent">Listo</span></h1>
+        <div class="sub">🇺🇸 · guía local para hispanos</div>
+
+        <div class="tagline">
+            🏡 ·  🚗 ·  📚 ·  💼 ·  🏛️ ·  🗺️
+        </div>
+
+        <p style="color:#2d3748; font-size:1.05rem; line-height:1.6; max-width:480px; margin:0 auto;">
+            Tu próxima guía <strong>escenario por escenario</strong> para vivir, trabajar y moverte en Estados Unidos.
+        </p>
+
+        <div class="placeholder-grid">
+            <span class="pill">🏠 Alquiler</span>
+            <span class="pill">🚗 Autos</span>
+            <span class="pill">📚 Educación</span>
+            <span class="pill">💼 Empleo</span>
+            <span class="pill">🏛️ Servicios</span>
+            <span class="pill">🗺️ Ciudades</span>
+        </div>
+
+        <div>
+            <span class="status">✅ En construcción · llegamos pronto</span>
+        </div>
+
+        <div class="footer-note">
+            📍 <span id="city-placeholder">Tu ciudad</span> · <span id="state-placeholder">tu estado</span>
+            <br />
+            <span style="font-size:0.8rem; color:#a0aec0;">
+                contenido con sabor local · hecho por y para la comunidad
+            </span>
+        </div>
+    </div>
+
+    <script>
+        // Pequeño toque local: muestra un ejemplo de cómo podrías personalizar por ciudad/estado
+        (function() {
+            const cityEl = document.getElementById('city-placeholder');
+            const stateEl = document.getElementById('state-placeholder');
+
+            // Esto es solo un ejemplo — más adelante puedes conectarlo a datos reales
+            const localData = {
+                ciudad: 'Miami',
+                estado: 'FL'
+            };
+
+            cityEl.textContent = localData.ciudad;
+            stateEl.textContent = localData.estado;
+        })();
+    </script>
+
+</body>
+</html>
